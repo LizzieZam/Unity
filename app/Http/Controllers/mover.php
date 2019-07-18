@@ -7,7 +7,6 @@ use App\move;
 class mover extends Controller
 {
     public function store(Request $request){
-        print_r($request);
         $mover=$request->all();
         /*$mover['posx']=$request['posicion']['posx'];
         $mover['posy']=$request['posicion']['posy'];

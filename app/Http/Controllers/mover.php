@@ -11,7 +11,8 @@ class mover extends Controller
         $mover['posx']=$request['data']['posx'];
         $mover['posy']=$request['data']['posy'];
         $mover['posz']=$request['data']['posz'];
-        return \App\move::create($mover);
+        $row=\App\move::create($mover);
+        return "REGISTRO AGREGADO";
     }
     public function index(){
         $posicion=\App\move::orderBy('id','desc')->first();

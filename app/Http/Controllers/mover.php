@@ -16,7 +16,7 @@ class mover extends Controller
     }
     public function index(){
         $posicion=\App\move::orderBy('id','desc')->first();
-        return  $posicion;
+        return  $posicion['posx'].";".$posicion['posy'].";".$posicion['posz'];
        
     }
     

@@ -7,10 +7,10 @@ use App\move;
 class mover extends Controller
 {
     public function store(Request $request){
-        $mover=$request->all();
-        /*$mover['posx']=$request['posicion']['posx'];
-        $mover['posy']=$request['posicion']['posy'];
-        $mover['posz']=$request['posicion']['posz'];*/
+        $mover=[];
+        $mover['posx']=$request['data']['posx'];
+        $mover['posy']=$request['data']['posy'];
+        $mover['posz']=$request['data']['posz'];
         return \App\move::create($mover);
     }
     public function index(){
